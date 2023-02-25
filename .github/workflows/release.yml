@@ -35,7 +35,7 @@ jobs:
           go install gioui.org/cmd/gogio
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v3
       - name: Build with gogio
         run: |
           $HOME/go/bin/gogio -target js \
