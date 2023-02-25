@@ -38,12 +38,12 @@ jobs:
         uses: actions/configure-pages@v1
       - name: Build with gogio
         run: |
-          gogio -target js \
-            -o ${{ steps.pages.outputs.base_url }} .
+          $HOME/go/bin/gogio -target js \
+            -o ./pages .
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./public
+          path: ./pages
 
   deploy:
     environment:
