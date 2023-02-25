@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install go and gio
         run: |
-          sudo snap install golang && \
+          sudo snap install go && \
           go get gioui.org/cmd/gogio && \
           go install gioui.org/cmd/gogio
       - name: Setup Pages
